@@ -1,8 +1,9 @@
-For original README.md:
-    https://github.com/loopeer/shadow
+For original README.md:  https://github.com/loopeer/shadow
 In this version, setBackgroundClr() works.
 
-Installation:
+## Installation:
+```
     dependencies {
         implementation 'com.github.elmliu:shadow:0.2'
     }
+```
