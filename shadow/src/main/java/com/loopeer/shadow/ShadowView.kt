@@ -41,7 +41,7 @@ open class ShadowView @JvmOverloads constructor(context: Context?, attributeSet:
     var backgroundClr: Int = 0
         set(value) {
             field = value
-            invalidate()
+            updateBackgroundClr(field)
         }
 
     var shadowRadius = 0f
@@ -142,6 +142,12 @@ open class ShadowView @JvmOverloads constructor(context: Context?, attributeSet:
         setLayerType(LAYER_TYPE_SOFTWARE, null)
         setWillNotDraw(false)
         background = null
+    }
+        
+    private fun updateBackgroundClr(bgColor:Int){
+        //起作用
+        bgPaint.color=bgColor
+        invalidate()
     }
 
     private fun updatePaintShadow() {
